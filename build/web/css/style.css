@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-inicial {
+    width: 90px;
+}
+
+.titulo-agenda {
+    font-size:24px;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex:1;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    min-height: 80vh;
+    border: 1px solid #BCC7D1;
+    border-radius:20px;
+}
+
+.link-acessar {
+    background: #00B2E3;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.link-acessar:hover {
+    background: #1fc6f0;
+}
+
+.agenda-e-novo {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    
+    width: 100%;
+    height: 70px;
+    margin: 50px;
+    border-bottom: 1px solid #BCC7D1;
+    padding-bottom: 20px;
+}
+
+.agenda-e-novo h1 {
+    font-size: 22px;
+}
+
+.agenda-e-novo img {
+    width: 48px;
+    filter: drop-shadow(0 -0mm 1mm rgb(0, 0, 0));
+    transition: filter 0.1s ease; /* Transição suave para o filtro */
+}
+
+.agenda-e-novo img:hover {
+    filter: drop-shadow(0 -0mm 2mm rgb(0, 0, 0));
+}
+
+.conteudo-principal:has(.agenda-e-novo) {
+    justify-content: start;
+    padding:0 30px;
+    min-height: 95vh;
+
+}
+
+.frmContato {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 30px;
+}
+
+.form-control {
+    padding: 0px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.form-control input {
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 10px;
+    width: 300px;
+    outline: none;
+    font-size: 18px;
+    border: 3px solid #BCC7D1;
+}
+
+.form-control label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.form-control button {
+    margin-top:15px;
+    padding: 10px;
+    font-size: 18px;
+    background: #00B2E3;
+    border:none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.conteudo-principal:has(a){
+    padding: 0px;
+    margin:0;
+    margin-bottom:25px;
+    
+}
+
+.form-control a {
+    display: inline-block;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    background: graytext;
+    border:none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+.form-control a:hover {
+    background: gray;
+}
+
+.form-control button:hover {
+    background: #1fc6f0;
+}
+
+.lista-contatos {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 0px;
+}
+
+.contato {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #BCC7D1;
+    padding: 30px;
+    border-radius: 7px;
+}
+
+.info-contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.contato strong, .contato p {
+    margin: 5px;
+    font-size: 15px;
+}
+
+.acoes-contato {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; 
+}
+
+.acoes-contato img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.contato:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.contato:last-child {
+    border: none;
+}
+
+@media(max-width: 600px){
+    
+    .agenda-e-novo {
+        gap: 15px;
+    }
+    
+    .conteudo-principal {
+        border: none;
+    }
+
+    .form-control{
+        padding: 0px;
+    }
+    
+    .form-control input {
+        padding: 10px;
+    }
+
+    .form-control button, form-control a {
+        padding: 15px;
+    }
+ 
+    .contato {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .acoes-contato {
+        margin-top: 10px;
+    }
+    
+    .lista-contatos {
+        width: 100%;
+    }
+    
+    .contato {
+        flex-direction: column-reverse;
+        position:relative;
+    }
+    
+    .foto-contato {
+       position: absolute;
+       top: 35px;
+       left: 30px;
+    }   
+}
+
